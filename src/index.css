@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gray-50 text-gray-900;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Custom Utility Classes */
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-card p-4 transition-shadow hover:shadow-card-hover;
+  }
+  
+  .stat-card {
+    @apply flex flex-col justify-between p-5 bg-white rounded-xl shadow-card;
+  }
+
+  .stat-value {
+    @apply text-3xl font-bold text-primary-700;
+  }
+
+  .stat-label {
+    @apply text-sm text-gray-500 mt-1;
+  }
+
+  .dashboard-section {
+    @apply mb-8;
+  }
+
+  .section-title {
+    @apply text-xl font-semibold mb-4 text-gray-800;
+  }
+  
+  .filter-btn {
+    @apply px-4 py-2 rounded-md border border-gray-200 text-sm font-medium transition-colors;
+  }
+  
+  .filter-btn-active {
+    @apply bg-primary-100 border-primary-300 text-primary-800;
+  }
+}
